@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style0.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+
+        }
+
+        .body4 {
+            background-color: #1E2235;
+        }
+
+        .class3 {
+            background-color: #161A33;
+            width: 60%;
+            margin-top: -1px;
+            clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+            animation: bgChange 3s infinite alternate;
+        }
+
+        @keyframes bgChange {
+            10% {
+                background-color: #161A33;
+            }
+
+            100% {
+                background-color: #F4C84D;
+            }
+
+            50% {
+                background-color: #1d4ed8;
+            }
+        }
+
+        .div3 {
+            height: 25px;
+        }
+
+        /* Fin de la tête de ma page */
+
+        .cv-section {
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow:
+                0 0 0 3px #facc15,
+                0 5px 20px rgba(0, 0, 0, 0.1),
+                inset 0 0 10px rgba(37, 99, 235, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 130px;
+            height: 130px;
+            /* padding-top: 20px; */
+            border-radius: 50%;
+            border: 4px solid #2563eb;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-header h1 {
+            font-size: 2rem;
+            color: #1d4ed8;
+            margin-top: 10px;
+        }
+
+        .profile-header h2 {
+            font-size: 1.2rem;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .cv-section h3 {
+            font-size: 1.3rem;
+            color: #1e2235;
+            margin-top: 25px;
+            border-bottom: 2px solid #f4c84d;
+            padding-bottom: 4px;
+        }
+
+        .cv-section ul {
+            padding-left: 20px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .cv-section ul li {
+            margin-bottom: 6px;
+        }
+
+        .cv-section p,
+        .cv-section span {
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .contact span {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .cv-section {
+                padding: 20px;
+            }
+
+            .profile-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .profile-header h2 {
+                font-size: 1rem;
+            }
+        }
+
+
+        /* notre footer */
+        .ensemblefoot {
+            display: flex;
+            width: 100%;
+            margin-top: -180px;
+        }
+
+        .foot1 {
+            width: 80%;
+            background-color: #F4C84D;
+            height: auto;
+            margin-top: 15%;
+            clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
+            border-top-right-radius: 500px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+            gap: 50px;
+            /* justify-content: space-between; */
+        }
+
+        .titrefoot {
+            margin-top: 15px;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .titrefoot h4 {
+            color: white;
+        }
+
+        .titrefoot p {
+            color: #1E2235;
+        }
+
+        .coordo {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .coordo h4 {
+            color: white;
+        }
+
+        .coordo p {
+            color: #1E2235;
+        }
+
+        .foot2 {
+            background-color: #282F49;
+            width: 30%;
+            height: 60px;
+            margin-top: 16.4%;
+            margin-left: -30px;
+            align-items: center;
+            border-top-right-radius: 50px;
+            clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+        }
+
+        .foot2 h4 {
+            align-items: center;
+            padding-left: 80px;
+            color: white;
+        }
+
+        .icone {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .icone a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .icone a:hover {
+            transform: scale(1.2);
+        }
+
+
+        .foot3 {
+            background-color: green;
+            width: 100%;
+            height: 2px;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .cv-section {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .profile-header img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .profile-header h2 {
+                font-size: 1rem;
+            }
+
+            .cv-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .cv-section ul {
+                padding-left: 15px;
+            }
+        }
+
+        /* cv */
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media screen and (max-width: 1024px) {
+            .ENSEMBLE {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section1 {
+                width: 100%;
+                flex-direction: column;
+                height: auto;
+                margin-right: 0;
+                border-bottom-right-radius: 0;
+                clip-path: none;
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .text1 {
+                margin: 10px 0;
+            }
+
+            .text1 ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .text1 a {
+                margin: 10px;
+            }
+
+            .recherche {
+                width: 100%;
+                padding: 10px;
+                clip-path: none;
+                border-radius: 0;
+                height: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .search {
+                width: 90%;
+                margin: 10px 0;
+            }
+
+            .cv-section {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .profile-header img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .profile-header h2 {
+                font-size: 1rem;
+            }
+
+            .cv-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .cv-section ul {
+                padding-left: 15px;
+            }
+        }
+
+        /* foot */
+        @media (max-width: 768px) {
+            .ensemblefoot {
+                flex-direction: column;
+                margin-top: 50px;
+            }
+
+            .foot1 {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                clip-path: none;
+                border-radius: 0;
+            }
+
+            .foot2 {
+                width: 100%;
+                height: auto;
+                margin-top: 10px;
+                margin-left: 0;
+                clip-path: none;
+                padding: 10px 0;
+            }
+
+            .foot2 h4 {
+                text-align: center;
+                padding-left: 0;
+            }
+        }
+    </style>
+
+    <title>Parcours du fondateur de Success Agence Congo</title>
+</head>
+
+<body>
+    <section class="body4">
+        <!-- header -->
+        <header>
+            <!-- SECTION D'ENSEMBLE -->
+            <section class="ENSEMBLE">
+                <!-- la section logo et option -->
+                <section class="section1">
+                    <div class="logo">
+                        <img src="Génère_moi_un_Logo_très_pro_de_mon_entreprise_au_nom_de____Success_Agence_Congo___qui_est_une_entrepise_spécialié_dans_le_numérique-removebg-preview.png"
+                            alt="">
+                    </div>
+                    <nav class="text1">
+                        <div class="burger" id="burger">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <ul id="menu">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="Services.html">Nos Services</a></li>
+                            <li><a href="boutique.html">Boutique</a></li>
+                            <li><a href="propos.html">À Propos</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- la section recherche -->
+                    <section class="recherche">
+                        <div class="search">
+                            <input type="search" placeholder="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </section>
+
+                </section>
+
+            </section>
+
+            <!-- la section de décoration -->
+            <section class="class3">
+                <div class="div3">
+
+                </div>
+            </section>
+
+        </header>
+        <!-- Fin de l'entête -->
+
+        <!-- Partie 1 : Présentation, contact et formation -->
+        <section class="cv-section" id="section1">
+            <div class="profile-header">
+                <img src="kem.png" alt="Photo de profil de Kemuel Zenas Bidikou">
+                <h1>Kemuel Zenas Bidikou</h1>
+                <h2>Développeur Web et Consultant SEO</h2>
+            </div>
+            <p>Motivé, ambitieux, créatif et passionné par le monde numérique...</p>
+
+            <div class="section">
+                <h3>Contact</h3>
+                <div class="contact">
+                    <span>Téléphone : +242 064446047 / +242 053039818</span>
+                    <span>Email : bkzservice9@gmail.com</span>
+                    <span>Adresse : C4-94 OCH</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Cursus scolaire</h3>
+                <ul>
+                    <li>Bac+1 en Physique – 2022/2024 – Faculté des Sciences Techniques, Brazzaville</li>
+                    <li>Baccalauréat Général Série D – 2020/2021 – Lycée Victor Justin Sathoud, Dolisie</li>
+                    <li>Brevet d'Étude du Premier Cycle – 2017/2018 – CEG Central, Dolisie</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Partie 2 : Compétences, formations pro, logiciels et langues -->
+        <section class="cv-section" id="section2">
+            <div class="section">
+                <h3>Formations professionnelles</h3>
+                <ul>
+                    <li>Développement Web Full-Stack – En formation sur Coursera (Méta)</li>
+                    <li>SEO – En formation à D-CLIC (OIF)</li>
+                </ul>
+                <p><strong>Technologies :</strong> HTML5, CSS3, MPD, Backend</p>
+            </div>
+
+            <div class="section">
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Design</li>
+                    <li>Volontariat</li>
+                    <li>Récolte des données</li>
+                    <li>Communication interne</li>
+                    <li>Gestion des réseaux sociaux</li>
+                    <li>WordPress, Hostinger, Google Analytics, Google Search Console</li>
+                    <li>Infographie : Canva, Adobe Photoshop, Illustrator</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Logiciels bureautiques & Collecte de données</h3>
+                <ul>
+                    <li>Word, Excel, PowerPoint</li>
+                    <li>ODK, Access, SCOPE, KoboCollect</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Langues</h3>
+                <ul>
+                    <li>Français</li>
+                    <li>Kikongo</li>
+                    <li>Lingala (Intermédiaire)</li>
+                    <li>Anglais (Intermédiaire)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Partie 3 : Aptitudes, projets, expériences et loisirs -->
+        <section class="cv-section" id="section3">
+            <div class="section">
+                <h3>Aptitudes</h3>
+                <ul>
+                    <li>Bonne compréhension des outils technologiques</li>
+                    <li>Capacité de travailler seul ou en équipe</li>
+                    <li>Facilité d'intégration</li>
+                    <li>Polyvalent</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Projets</h3>
+                <ul>
+                    <li>Création d'un site web de location et de vente des biens immobiliers</li>
+                    <li>Création d'une base de données pour la gestion universitaire</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Expériences professionnelles</h3>
+                <ul>
+                    <li>Infographe à temps partiel – LifeServis [2023/2025]</li>
+                    <li>Chargé rédaction messages clés – OMS CG (ONU), journée mondiale de lutte contre le SIDA [Déc
+                        2024/Jan 2025]</li>
+                    <li>Finaliste du challenge Startupper – TotalEnergies pour le projet BKZHUILE [23/10/2024]</li>
+                    <li>Secrétaire Arts et Cultures – Association Jeunesse en Éveil du Congo [2021/2023]</li>
+                    <li>E-commerçant – Cowema SARL [2023/2024]</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Autres formations</h3>
+                <ul>
+                    <li>Journaliste Reporter d'Images – 4ème édition de la Formac</li>
+                    <li>Rédaction et voix off</li>
+                    <li>Montage vidéo</li>
+                    <li>Écriture administrative, rapport et compte rendu</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Centres d'intérêt</h3>
+                <ul>
+                    <li>Documentaires</li>
+                    <li>Sport</li>
+                    <li>Lecture</li>
+                    <li>Code</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pied de la page -->
+        <footer>
+            <section class="ensemblefoot">
+                <section class="foot1">
+                    <div class="titrefoot">
+                        <h4>Kemuel Zenas BIDIKOU</h4>
+                        <p>Consultant SEO & Développeur Web</p>
+                    </div>
+                    <div class="coordo">
+                        <h4>Contacts</h4>
+                        <p>Email: bkzsercice9@gmail.com</p>
+                        <p>Tel:+242 06 444 6047/05 303 9818</p>
+                    </div>
+
+                </section>
+                <section class="foot2">
+                    <h4>Suivez-moi</h4>
+                    <div class="icone">
+                        <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> </a>
+                    </div>
+                </section>
+            </section>
+            <section class="foot3">
+
+            </section>
+        </footer>
+
+        <script>
+            const burger = document.getElementById('burger');
+            const menu = document.getElementById('menu');
+
+            burger.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        </script>
+    </section>
+</body>
+
+</html>
