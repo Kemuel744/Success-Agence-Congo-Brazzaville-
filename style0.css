@@ -225,8 +225,9 @@ span {
   }
 
   .choix a button {
-    width: 100%;
-    padding: 10px;
+    width: 45%;
+    padding: 6px 6px;
+    /*Modifier et diffère du Github*/
     font-size: 16px;
   }
 }
@@ -246,7 +247,8 @@ span {
 
 @media screen and (max-width: 768px) {
   .body1 {
-    background-size: cover; /* ou 100% 100% */
+    background-size: cover;
+    /* ou 100% 100% */
   }
 }
 
@@ -363,15 +365,18 @@ main h5 {
 /* Tablettes et écrans moyens : 2 ou 3 colonnes */
 @media screen and (max-width: 1024px) {
   .service-card {
-    width: 45%; /* 2 cartes par ligne */
+    width: 45%;
+    /* 2 cartes par ligne */
   }
 }
 
 /* Petits écrans : 1 carte par ligne */
 @media screen and (max-width: 600px) {
   .service-card {
-    width: 90%; /* une carte large presque pleine largeur */
-    margin: 10px auto; /* centrer les cartes */
+    width: 90%;
+    /* une carte large presque pleine largeur */
+    margin: 10px auto;
+    /* centrer les cartes */
   }
 }
 
@@ -380,7 +385,7 @@ main h5 {
 @media screen and (max-width: 1024px) {
   .titre {
     font-size: 1.2rem;
-    top: 40%;
+    top: 60%;
     width: 90%;
     padding: 10px;
     left: 50%;
@@ -391,7 +396,7 @@ main h5 {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-top: 300px;
+    margin-top: 90px;
   }
 
   .service-card {
@@ -414,11 +419,11 @@ main h5 {
   .titre {
     font-size: 1rem;
     padding: 8px;
-    top: 35%;
+    top: 50%;
   }
 
   .contenaire {
-    margin-top: 250px;
+    margin-top: 80px;
     padding: 0 10px;
   }
 
@@ -824,6 +829,25 @@ main h5 {
   .search {
     width: 90%;
     margin: 10px 0;
+  }
+
+}
+
+@media (max-width:767px) {
+  .ENSEMBLE {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section1 {
+    width: 100%;
+    display: flex;
+    height: auto;
+    margin-right: 0;
+    border-bottom-right-radius: 0;
+    clip-path: none;
+    align-items: center;
+    padding: 10px 0;
   }
 
 }
