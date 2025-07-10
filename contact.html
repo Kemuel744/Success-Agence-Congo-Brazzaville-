@@ -510,9 +510,18 @@
     <script>
         const burger = document.getElementById('burger');
         const menu = document.getElementById('menu');
+        const links = menu.querySelectorAll('a');
 
+        // Ouvre ou ferme le menu en cliquant sur le bouton burger
         burger.addEventListener('click', () => {
             menu.classList.toggle('active');
+        });
+
+        // Ferme le menu quand on clique sur un lien du menu
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+            });
         });
 
         document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
